@@ -1,0 +1,115 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% Awesome CV LaTeX Template for CV/Resume
+%
+% This template has been downloaded from:
+% https://github.com/posquit0/Awesome-CV
+%
+% Original author:
+% Claud D. Park <posquit0.bj@gmail.com>
+% http://www.posquit0.com
+%
+% Modifications by:
+% Junhao Dong <junhao.dong96@gmail.com>
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+%
+
+
+%-------------------------------------------------------------------------------
+% CONFIGURATIONS
+%-------------------------------------------------------------------------------
+% A4 paper size by default, use 'letterpaper' for US letter
+\documentclass[11pt, letterpaper]{awesome-cv}
+
+% Configure page margins with geometry
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
+% Specify the location of the included fonts
+\fontdir[fonts/]
+
+% Color for highlights
+% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
+%                 awesome-nephritis, awesome-concrete, awesome-darknight
+% OSU orange: osuorange
+% beaver orange: beaverorange
+\colorlet{awesome}{beaverorange}
+% Uncomment if you would like to specify your own color
+% \definecolor{awesome}{HTML}{CA63A8}
+
+% Colors for text
+% Uncomment if you would like to specify your own color
+% \definecolor{darktext}{HTML}{414141}
+% \definecolor{text}{HTML}{333333}
+% \definecolor{graytext}{HTML}{5D5D5D}
+% \definecolor{lighttext}{HTML}{999999}
+
+% Set false if you don't want to highlight section with awesome color
+\setbool{acvSectionColorHighlight}{true}
+
+% If you would like to change the social information separator from a pipe (|) to something else
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+\makeatletter
+\patchcmd{\@sectioncolor}{\color}{\mdseries\color}{}{}
+\makeatother
+
+% extra packages
+\usepackage{makecell}
+\usepackage{lastpage}
+\usepackage{xspace}
+
+%-------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%	Comment any of the lines below if they are not required
+%-------------------------------------------------------------------------------
+% Available options: circle|rectangle,edge/noedge,left/right
+% \photo[rectangle,edge,right]{profile}
+\name{Austin}{Warren}
+%\position{Software Engineer}
+\address{149 Wheeler St., Lebanon, OR 97355}
+
+\mobile{253-549-9420}
+\email{warren.austinm@gmail.com}
+%\email{warrenau@oregonstate.edu}
+% \homepage{homepage}
+\github{warrenau}
+\linkedin{austinwarren}
+% \gitlab{gitlab-id}
+% \stackoverflow{SO-id}{SO-name}
+% \twitter{@twit}
+% \skype{skype-id}
+% \reddit{reddit-id}
+%\extrainfo{warrenau@oregonstate.edu}
+\quote{I am an NEUP Fellow at Oregon State University looking for an internship over summer 2024. I am a PhD student studying Nuclear Engineering. My current research is combining neutronics computation with thermal hydraulics experimentation in real time. I have experience with software development, fluid mechanics, heat transfer, CFD, and neutronics codes Serpent 2 and MCNP. My Master's thesis coupled Serpent 2 and STAR-CCM+ for a helium-3 injection during a transient reactor pulse for TREAT. I also have experience building, maintaining, and running experimental facilities.  I work well with a team or on my own and can present my work clearly to both technical and general audiences.}
+
+%-------------------------------------------------------------------------------
+\begin{document}
+
+% Print the header with above personal informations
+% Give optional argument to change alignment(C: center, L: left, R: right)
+\makecvheader[C]
+
+% Print the footer with 3 arguments(<left>, <center>, <right>)
+% Leave any of these blank if they are not needed
+ \makecvfooter
+   {}
+   {\thepage/ \pageref{LastPage}}
+   {}
+
+%-------------------------------------------------------------------------------
+%	CV/RESUME CONTENT
+%	Each section is imported separately, open each file in turn to modify content
+%-------------------------------------------------------------------------------
+
+\input{resume/education.tex}
+
+\input{resume/awards}
+\input{resume/skills.tex}
+\input{resume/projects.tex}
+\input{resume/experience.tex}
+\input{resume/publications}
+
+%-------------------------------------------------------------------------------
+\end{document}
